@@ -59,14 +59,7 @@ var initDb = function(callback) {
 };
 
 app.get('/', function (req, res) {
-  // try to initialize the db on every request if it's not already
-  // initialized.
-  if (!db) {
-    initDb(function(err){});
-  }
-  if (db) {
-    // Create a document with request IP and current time of request
-    res.render('index', {title : 'Poputchick'});
+    res.render('index', {title:"Poputchick"});
 });
 
 
