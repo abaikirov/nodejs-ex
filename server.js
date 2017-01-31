@@ -65,7 +65,6 @@ app.get('/', function (req, res) {
     initDb(function(err){});
   }
   if (db) {
-    var col = db.collection('users');
     // Create a document with request IP and current time of request
     res.render('index', {title : 'Poputchick'});
 });
